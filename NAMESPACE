@@ -2,4 +2,3 @@
 
 export(simulate_duckdb)
 export(translate_duckdb)
-useDynLib(duckdb, .registration = TRUE)
