@@ -1,66 +1,37 @@
-Package: duckdb
-Title: DBI Package for the DuckDB Database Management System
+Package: tidyduck
+Title: High-level bindings for the DuckDB Database Management System
 Version: 0.5.0
 Authors@R:
-    c(person(given = "Hannes",
-             family = "Mühleisen",
+    c(person(given = "Kirill",
+             family = "M\u00fcller",
              role = c("aut", "cre"),
-             email = "hannes@cwi.nl",
-             comment = c(ORCID = "0000-0001-8552-0029")),
-      person(given = "Mark",
-             family = "Raasveldt",
-             role = "aut",
-             email = "mark.raasveldt@cwi.nl",
-             comment = c(ORCID = "0000-0001-5005-6844")),
-      person("Stichting DuckDB Foundation", role = "cph"),
-      person("Apache Software Foundation", role = "cph"),
-      person("PostgreSQL Global Development Group", role = "cph"),
-      person("The Regents of the University of California", role = "cph"),
-      person("Cameron Desrochers", role = "cph"),
-      person("Victor Zverovich", role = "cph"),
-      person("RAD Game Tools", role = "cph"),
-      person("Valve Software", role = "cph"),
-      person("Rich Geldreich", role = "cph"),
-      person("Tenacious Software LLC", role = "cph"),
-      person("The RE2 Authors", role = "cph"),
-      person("Google Inc.", role = "cph"),
-      person("Facebook Inc.", role = "cph"),
-      person("Steven G. Johnson", role = "cph"),
-      person("Jiahao Chen", role = "cph"),
-      person("Tony Kelman", role = "cph"),
-      person("Jonas Fonseca", role = "cph"),
-      person("Lukas Fittl", role = "cph"),
-      person("Salvatore Sanfilippo", role = "cph"),
-      person("Art.sy, Inc.", role = "cph"),
-      person("Oran Agra", role = "cph"),
-      person("Redis Labs, Inc.", role = "cph"),
-      person("Melissa O'Neill", role = "cph"),
-      person("PCG Project contributors", role = "cph"))
+             email = "krlmlr+r@mailbox.org",
+             comment = c(ORCID = "0000-0002-1416-3412")),
+      person("Stichting DuckDB Foundation", role = "cph"))
 Description: The DuckDB project is an embedded analytical data
-    management system with support for the Structured Query Language (SQL). This package includes all of
-    DuckDB and a R Database Interface (DBI) connector.
+    management system with support for the Structured Query Language (SQL).
+    This package includes optional bindings to DuckDB for the tidyverse
+    and other ecosystems.
 License: MIT + file LICENSE
-URL: https://duckdb.org/, https://github.com/duckdb/duckdb
-BugReports: https://github.com/duckdb/duckdb/issues
+URL: https://duckdb.org/, https://github.com/duckdb/tidyduck
+BugReports: https://github.com/duckdb/tidyduck/issues
 Depends:
-    DBI,
     R (>= 3.6.0)
 Imports:
-    methods,
-    utils
-Suggests:
     arrow,
     bit64,
     callr,
-    DBItest,
-    dplyr,
     dbplyr,
-    nycflights13,
-    testthat,
+    DBI,
+    dplyr,
+    duckdb (>= 0.5.0),
+    methods,
     tibble,
+    utils,
     vctrs,
     withr
+Suggests: 
+    testthat
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.1
-SystemRequirements: C++11, GCC on Solaris
