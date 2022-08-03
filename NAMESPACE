@@ -2,3 +2,5 @@
 
 export(simulate_duckdb)
 export(translate_duckdb)
+import(dbplyr, except = c(sql, ident))
+import(dplyr)

@@ -8,6 +8,8 @@
 #' <https://duckdb.org/> for the project website.
 #'
 ## usethis namespace: start
+#' @import dplyr
+#' @rawNamespace import(dbplyr, except = c(sql, ident))
 ## usethis namespace: end
 #' @docType package
 #' @name tidyduck-package
